@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "fir-cfaaa": {
+      "hosting": {
+        "FireApp": [
+          "fir-cfaaa"
+        ]
+      }
+    }
+  }
+}

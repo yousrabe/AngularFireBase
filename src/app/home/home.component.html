@@ -1,0 +1,72 @@
+
+
+
+
+  <mat-toolbar color="primary">
+    <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+    <a [routerLink]="'/login'" style="color: white;margin-left: 90%;">logout</a>
+  </mat-toolbar>
+
+  <div class="input-row" style="padding-left: 500px;padding-top: 100px;">
+    <mat-form-field>
+      <input matInput class="form-control" placeholder="Saisir un entier" type="number" [(ngModel)]='number1'>
+    </mat-form-field>
+    <button mat-button  (click)="calcul()">GO!</button>
+  </div>
+  
+  <div style="padding-left:500px" >
+  <label class="err">{{errorMessage}}</label>
+</div> 
+ 
+
+<div class="content" fxLayout="row wrap" fxLayoutGap="16px grid">
+  <div fxFlex="30%" fxFlex.xs="100%" fxFlex.sm="35%" >
+    <mat-card class="mat-elevation-z4" >
+      <mat-card-header>
+        <mat-card-title>2 Euro</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image style="height:200px;" src="../assets/deux.jpg">
+      <mat-card-content>
+        <h5>
+          le nombre de piéces de 2 Euro à rendre est: <span color="red">{{billetD}}</span> 
+        </h5>
+      </mat-card-content>
+      <mat-card-actions>
+       
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  <div fxFlex="30%" fxFlex.xs="100%" fxFlex.sm="35%" style="margin-left:30px;" >
+    <mat-card class="mat-elevation-z4" >
+      <mat-card-header>
+        <mat-card-title>5 Euro</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image style="height:200px;" src="../assets/cinqe.jpg">
+      <mat-card-content>
+        <h5>
+          le nombre de piéces de 5 Euro à rendre est: <span color="red">{{billetC}}</span> 
+        </h5>
+      </mat-card-content>
+      <mat-card-actions>
+       
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  <div fxFlex="30%" fxFlex.xs="100%" fxFlex.sm="35%"  style="margin-left:30px;">
+    <mat-card class="mat-elevation-z4" >
+      <mat-card-header>
+        <mat-card-title>10 Euro</mat-card-title>
+      </mat-card-header>
+      <img mat-card-image style="height:200px;" src="../assets/dix.jpg">
+      <mat-card-content>
+        <h5>
+          le nombre de piéces de 10 Euro à rendre est: <span color="red">{{billetDix}}</span> 
+        </h5>
+      </mat-card-content>
+      <mat-card-actions>
+       
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  
+</div>
