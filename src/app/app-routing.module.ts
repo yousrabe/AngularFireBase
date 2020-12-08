@@ -8,9 +8,9 @@ import { SingupComponent } from './singup/singup.component';
 import { AuthGuard } from './services/auth.guard';
 
 
-const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['login']);
+const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['']);
 const routes: Routes = [
-  {path:"login",component:LoginComponent},
+  {path:"",component:LoginComponent},
   {path:"signup",component:SingupComponent},
   {path:"home",component:HomeComponent, canActivate: [AngularFireAuthGuard], data: { authGuardPipe: redirectUnauthorizedToLogin }}
   
