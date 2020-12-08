@@ -27,7 +27,9 @@ import { SingupComponent } from './singup/singup.component';
 import { FirebaseService } from './services/firebase.service';
 import { LayoutModule } from '@angular/cdk/layout';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { AuthGuard } from './services/auth.guard';
+import { AuthGuard } from 'firebase-authentication-with-angular-7/src/app/core/auth.guard';
+import { AngularFireAuthGuard, AngularFireAuthGuardModule } from '@angular/fire/auth-guard';
+
 
 @NgModule({
   declarations: [
@@ -59,7 +61,8 @@ import { AuthGuard } from './services/auth.guard';
     
  
   ],
-  providers: [FirebaseService,AuthGuard],
+  providers: [FirebaseService,AngularFireAuthGuard],
+  exports: [ AppComponent, AngularFireAuthGuardModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
