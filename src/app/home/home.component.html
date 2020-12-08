@@ -8,8 +8,9 @@
   </mat-toolbar>
 
   <div class="input-row" style="padding-left: 500px;padding-top: 100px;">
-    <mat-form-field>
-      <input matInput class="form-control" placeholder="Saisir un entier" type="number" [(ngModel)]='number1'>
+    <mat-form-field class="example-full-width" >
+      <input matInput  class="form-control"  type="number" [(ngModel)]='number1'>
+      <mat-placeholder style="size: 50px;">Saisir un nombre ...</mat-placeholder>
     </mat-form-field>
     <button mat-button  (click)="calcul()">GO!</button>
   </div>
