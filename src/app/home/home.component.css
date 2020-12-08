@@ -47,7 +47,7 @@
   }
   .example-full-width {
     width: 60%;
-    font-size:1.5em!important;
+    font-size:1.5em;
 
   }
   ::ng-deep .mat-form-field .mat-input-element {
